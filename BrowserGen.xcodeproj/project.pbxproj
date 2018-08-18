@@ -45,6 +45,7 @@
 		3C13EA8F2126025300928394 /* BrowserGen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrowserGen.entitlements; sourceTree = "<group>"; };
 		3C13EA9D2126190C00928394 /* Generate.rb */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text.script.ruby; path = Generate.rb; sourceTree = "<group>"; };
 		3C2A8DC0212798FD00484583 /* Generated Browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Generated Browser.entitlements"; sourceTree = "<group>"; };
+		3C2A8DC72128D89B00484583 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3CE9A0831DB6AEAB001D32AC /* Generated Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Generated Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9A0861DB6AEAB001D32AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CE9A0871DB6AEAB001D32AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		3CE9A07A1DB6AEAB001D32AC = {
 			isa = PBXGroup;
 			children = (
+				3C2A8DC72128D89B00484583 /* README.md */,
 				3CE9A0971DB6AF55001D32AC /* Cocoa.framework */,
 				3CE9A0991DB6AFD5001D32AC /* WebKit.framework */,
 				3C13EA832126025100928394 /* BrowserGen */,
