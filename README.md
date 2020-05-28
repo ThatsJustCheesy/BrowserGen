@@ -1,20 +1,40 @@
-Generates single-site web browsers. Suitable for simple reference sites (e.g. [WordReference.com](http://www.wordreference.com/), [OSStatus.com](https://osstatus.com)). May work with other types of sites, such as web applications, but that is not at all recommended, as only barebones web browser functionality is implemented.
+# BrowserGen
 
-Build & run the “BrowserGen” scheme of the xcodeproj, and use the GUI to generate browsers. They are automatically placed in /Applications, taking care not to replace any existing apps. From there you can simply launch the generated apps and use them.
+## Generate single-purpose reference site browsers
 
-This is not very secure due to what it is (an application generator). Don’t use on public networks, on server machines, etc. The generated apps are set to “allow arbitrary loads” so that HTTP websites work, and they aren’t sandboxed due to my kludgy way of doing custom icons (`codesign` won’t sign anything with xattrs). Your use of this software is entirely at your own risk. IMO, stick to private home networks and trusted websites, keep on top of your security updates, and you should be fine. But again, use at own risk.
+_BrowserGen_ is a basic macOS app that generates single-site web browsers, suitable for simple reference sites like [Power Thesaurus](https://www.powerthesaurus.org), [OSStatus.com](https://osstatus.com), and [WordReference](http://www.wordreference.com/) (all highly recommended). The browsers have only barebones functionality, and as such should only be used for relatively simple reference sites.
 
-I personally use this as follows, YMMV:
+## Install
 
-1. Generate a single-site browser for a commonly-visited reference site, like the ones above.
-2. When I need the reference material, hit ⌘Space for Spotlight Search, and type the site name, which leads to the app. (Quick general Spotlight tip: if you have an app called e.g. WordReference, typing “wr” is sufficient for Spotlight to direct you to it)
-3. Type something into the reference site.
-4. When done, either ⌘H hide the app or ⌘Q quit it.
-5. Repeat from step 2 whenever the material is needed again.
+For now, you'll have to build and run the "BrowserGen" scheme in the `xcodeproj`.
 
-This, in my opinion, is far easier than fumbling into the web browser, opening a new window, and even just clicking on a Favourites icon.  
-P.S. I don't use this for word definitions. Another quick Spotlight tip: hold down ⌘L in the search window to jump to the dictionary definition, and optionally press ⌘D to open in Dictionary.app. Also, ⌘B opens a web search in the default browser. Just thought I'd share.
+## Use
 
-MIT-licensed.
+Use the GUI in `BrowserGen.app` to generate browsers. They are automatically placed in `/Applications`, taking care not to overwrite existing files; e.g., for the site name `PowerThesaurus`, BrowserGen generates `PowerThesaurus.app`. From there you can launch the generated browser apps and use them.
 
-😊 Ian
+Here is my typical workflow for accessing reference material using a generated browser:
+
+1. Hit <kbd>⌘Space</kbd> for Spotlight Search, and type the site name, which leads to the app. (You can just type the capital letters, and Spotlight will know what you mean.)
+2. Look something up on the reference site.
+3. Dismiss the app in some way: <kbd>⌘⇥</kbd> to cycle away, <kbd>⌘H</kbd> to hide, <kbd>⌘Q</kbd> to quit, use Mission Control, etc.
+
+In general, this is far easier than fumbling into a full, general-purpose web browser and navigating to the site, all while fighting the annoying per-application window system in macOS.
+
+## Disclaimer
+
+- The generated browsers are not sandboxed.
+- They are not always codesigned.
+- They allow communication through HTTP.
+- This all sounds like a bad idea, and to be frank, it probably is.
+- **Please: only use with trusted websites on trusted networks, and stay on top of security updates.**
+- Your use of this software is ultimately at your own risk; there is no warranty provided.
+
+## Other useful Spotlight tricks
+
+- Hold <kbd>⌘L</kbd> to jump to the Dictionary result.
+- Press <kbd>⌘D</kbd> to move the search to Dictionary.app.
+- Press <kbd>⌘B</kbd> to move the search to the default Safari search engine in the default web browser.
+
+## License
+
+Available under the terms of the [MIT license](LICENSE.txt).
